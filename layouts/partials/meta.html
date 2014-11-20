@@ -3,7 +3,7 @@
 <meta name="description" content="">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 {{with .Description }}<meta name="description" content="{{ . }}">{{end}}
 <meta name="keywords" content="{{ if .Keywords }}{{ range .Keywords }}{{ . }}, {{ end }}{{else if isset .Params "tags" }}{{ range .Params.tags }}{{ . }}, {{ end }}{{end}}">

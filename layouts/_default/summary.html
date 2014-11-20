@@ -1,22 +1,19 @@
 <div class="blog-post">
-    <h2 class="blog-post-title">
-		<a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a>
+	<h2>
+		<a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</a>
 	</h2>
-    <p class="blog-post-meta">
-        {{ .Date.Format "Mon, Jan 2, 2006" }}
-	</p>
 
-	<hr>
-
-    <p>
-        {{ .Summary }}
-    </p>
-
-	<hr>
-
-    <p>
-        <a href='{{ .Permalink }}'>
-            <nobr>Read more →</nobr>
-        </a>
-    </p>
+    <blockquote>
+        <p class="small">
+            {{ .Date.Format "Mon, Jan 2, 2006" }}
+        </p>
+        <p class="text-justify">
+            {{ .Summary }}
+        </p>
+		<footer>
+            <a href='{{ .Permalink }}'>
+                <nobr>Read more →</nobr>
+            </a>
+        </footer>
+    </blockquote>
 </div>

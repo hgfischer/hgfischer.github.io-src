@@ -28,9 +28,10 @@ $ drutil eject
 
 Se após alguns segundos a mídia não for ejetada com sucesso, tente as seguintes combinações de teclas de atalho:
 
-* `Option + Eject`
-* `Shift + Command + E`
+* <kbd>Option + Eject</kbd>
+* <kbd>Shift + Command + E</kbd>
 
-Se mesmo assim ainda não funcionar, tente pressionar `ESC + Eject` logo após a música de boot, após reinicializar o Mac.
+Se mesmo assim ainda não funcionar, tente pressionar <kbd>ESC + Eject</kbd> logo após a música de boot, após 
+reinicializar o Mac.
 
 E se mesmo assim nada funcionar, desculpe, mas é melhor procurar um profissional.

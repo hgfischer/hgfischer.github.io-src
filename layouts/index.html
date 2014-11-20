@@ -4,40 +4,67 @@
     {{ partial "header_menu.html" . }}
 
     <div class="container">
-        <div class="blog-header">
-            <h1 id="blog-title">{{ .Site.Title }}</h1>
-            <p class="lead blog-description">golang</p>
-        </div>
-
         <div class="row">
-            <div class="col-sm-8 blog-main">
-                {{ range first 410 .Data.Pages }} {{ .Render "summary" }} {{ end }}
+            <div class="col-sm-12">
+                <h1 id="blog-title">{{ .Site.Title }}</h1>
             </div>
-        </div>
 
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-            <div class="sidebar-module sidebar-module-inset">
-                <h4>About</h4>
-                <p>Lorem ipsum <em>aftas ardem</em>
-                </p>
+            <div class="clearfix visible-xs-block"></div>
+
+            <div class="col-sm-8 blog-main">
+                {{ range first 10 .Data.Pages }} {{ .Render "summary" }} {{ end }}
             </div>
-            <div class="sidebar-module">
-                <h4>Archives</h4>
-                <ol class="list-unstyled">
-                    <li><a href="#">March 2014</a>
-                    </li>
-                </ol>
+
+            <div class="col-sm-3 col-sm-offset-1">
+                <div class="sidebar-module sidebar-module-inset">
+                    <h4>Search</h4>
+                    <p>
+                        <form action="https://www.google.com/search" method="get" target="_blank">
+                            <div class="post_search input-group">
+                                <input type="hidden" name="sitesearch" value="hgfischer.org">
+                                <input type="text" name="q" class="form-control">
+                                <span class="input-group-btn">
+									<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                </span>
+                            </div>
+                        </form>
+                    </p>
+                </div>
+                <div class="sidebar-module">
+                    <h4>Tags</h4>
+                    <ul class="list-unstyled">
+                        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                        <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="sidebar-module">
+                    <h4>Social</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">March 2014</a>
+                        </li>
+                    </ol>
+                </div>
             </div>
-            <div class="sidebar-module">
-                <h4>Social</h4>
-                <ol class="list-unstyled">
-                    <li><a href="#">March 2014</a>
-                    </li>
-                </ol>
+
+            <div class="clearfix visible-xs-block"></div>
+
+            <div class="col-sm-12">
+                <small>
+	                &copy; 1997-2014
+	                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+						<span itemprop="name"><em>Herbert G. Fischer</em>.</span>
+	                </span>
+	                <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Some rights reserved</a>;
+					please attribute properly and link back.
+				</small>
             </div>
         </div>
     </div>
 
-    {{ partial "footer.html" . }} {{ partial "footer_includes.html" . }}
+    {{ partial "footer_includes.html" . }}
 </body>
+
 </html>
