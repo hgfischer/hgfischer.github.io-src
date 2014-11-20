@@ -10,6 +10,8 @@ tags:
 [CUDA](http://www.nvidia.com/object/cuda_what_is.html) é uma arquitetura para computação paralela em GPUs da NVIDIA. 
 Basicamente é um conjunto de ferramentas e uma linguagem C para programar as GPUs da NVIDIA.
 
+<!--more-->
+
 Há suporte para Linux, Windows e Mac OS X, tanto em 32 bits como em 64 bits.
 
 Para instalar no Mac OS X, segui os seguintes passos.
@@ -46,11 +48,13 @@ export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 
 Para compilar os exemplos do SDK, abra um Terminal e:
 
-	$ cd /Developer/CUDA
-	$ make
-	$ make dbg=1
-	$ make emu=1
-	$ make emu=1 dbg=1
+```
+$ cd /Developer/CUDA
+$ make
+$ make dbg=1
+$ make emu=1
+$ make emu=1 dbg=1
+```
 
 As opções acima irão criar diretórios variados em `/Developer/CUDA/bin/darwin/` com diversas versões dos binários de 
 exemplo. Para deixar mais claro, `dbg` compila versões para debug e `emu` compila versões que rodam sob emulação na 
@@ -61,21 +65,23 @@ Num teste realizado com um MacBook sem GPU NVIDIA, nem em modo emulado executou.
 
 A seguir um pequeno benchmark comparando a uma simulação n-body com GPU e sem GPU (modo emulado):
 
-	$ cd /Developer/CUDA
-	$ bin/darwin/release/nbody -benchmark -n=1000
+```
+$ cd /Developer/CUDA
+$ bin/darwin/release/nbody -benchmark -n=1000
 
-	Run "nbody -benchmark -n=<numBodies>" to measure perfomance.
+Run "nbody -benchmark -n=<numBodies>" to measure perfomance.
 
-	1000 bodies, total time for 100 iterations: 47.264 ms
-	= 2.116 billion interactions per second
-	= 42.316 GFLOP/s at 20 flops per interaction
-	
-	$ bin/darwin/emurelease/nbody -benchmark -n=1000
-	Run "nbody -benchmark -n=<numBodies>" to measure perfomance.
-	
-	1000 bodies, total time for 100 iterations: 5305.616 ms
-	= 0.019 billion interactions per second
-	= 0.377 GFLOP/s at 20 flops per interaction
+1000 bodies, total time for 100 iterations: 47.264 ms
+= 2.116 billion interactions per second
+= 42.316 GFLOP/s at 20 flops per interaction
+
+$ bin/darwin/emurelease/nbody -benchmark -n=1000
+Run "nbody -benchmark -n=<numBodies>" to measure perfomance.
+
+1000 bodies, total time for 100 iterations: 5305.616 ms
+= 0.019 billion interactions per second
+= 0.377 GFLOP/s at 20 flops per interaction
+```
 
 Apesar do modo emulado provavelmente ser mais lento do que um código desenvolvido especialmente para CPUs, dá para se 
 ter uma boa noção do poder de processamento das GPUs. Os resultados mostraram que a GPU foi cerca de **112x** mais 
@@ -85,8 +91,10 @@ rápida do que a CPU!
 
 Um pouco de _doce para os olhos_. Aqui rodei o exemplo nbody e capturei sua tela:
 
-	$ cd /Developer/CUDA
-	$ bin/darwin/release/nbody
+```
+$ cd /Developer/CUDA
+$ bin/darwin/release/nbody
+```
 
 ![Eye candy](http://hgfischer.files.wordpress.com/2009/04/cuda-nbody1.png)
 
