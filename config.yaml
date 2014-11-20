@@ -1,0 +1,13 @@
+---
+baseurl         : "http://hgfischer.org/"
+title           : "Herbert G. Fischer"
+copyright       : "Copyright (c) 1997-2014, Herbert G. Fischer; all rights reserved."
+MetaDataFormat  : "yaml"
+disqusShortname : "hgfischer"
+
+params:
+    AuthorName: "Herbert G. Fischer"
+
+indexes:
+    tag: "tags"
+    topic: "topics"
