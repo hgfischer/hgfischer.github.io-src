@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-    <meta charset="utf-8">
-
+	<meta charset="utf-8">
+	<title>{{ .Site.Title }}</title>
     {{ partial "meta.html" . }}
-
     <base href="{{ .Site.BaseUrl }}">
-    <title>{{ .Site.Title }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-
-    {{ partial "head_includes.html" . }}
+    {{ partial "header_includes.html" . }}
 </head>
 
 <body>
@@ -28,3 +25,6 @@
 <aside id="meta"></aside>
 
 {{ partial "footer.html" . }}
+{{ partial "footer_includes.html" . }}
+</body>
+</html>
