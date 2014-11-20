@@ -5,11 +5,12 @@ tags:
 - erlang
 - macosx
 - desenvolvimento
+- pt_BR
 title: Instalando Erlang no Mac OS X Leopard
 topics:
 - Desenvolvimento
 - Erlang
-- Mac-OS-X
+- Mac OS X
 ---
 
 
@@ -47,16 +48,16 @@ Os comandos abaixo estão de acordo com as versões que utilizei. Caso utilize u
 alterações nos nomes de arquivos e diretórios. Caso descubra alguma particularidade da versão, fique à vontade para 
 comentar no final deste artigo.
 
-	tar xvzf otp_src_R13A.tar.gz
-	cd otp_src_R13A
-	./configure --enable-hipe --enable-smp-support --enable-threads
-	make
-	sudo make install
+	$ tar xvzf otp_src_R13A.tar.gz
+	$ cd otp_src_R13A
+	$ ./configure --enable-hipe --enable-smp-support --enable-threads
+	$ make
+	$ sudo make install
 
 
 Para testar o Erlang:
 
-	erl
+	$ erl
 
 Você verá algo assim:
 
@@ -77,11 +78,11 @@ opção `--prefix` no comando configure.
 
 Para instalar a documentação em formato _man_, utilize o seguinte comando:
 
-	sudo tar xvzf otp_doc_man_R13A.tar.gz -C /usr/local/share
+	$ sudo tar xvzf otp_doc_man_R13A.tar.gz -C /usr/local/share
 
 Para testar a documentação:
 
-	man erl
+	$ man erl
 
 
 ## Testando
@@ -96,8 +97,8 @@ Para testar se o básico está funcionando, crie um arquivo chamado hello.erl co
 
 Para compilar e executar o teste:
 
-	erl -compile hello
-	erl -noshell -s hello hello_werld -s init stop
+	$ erl -compile hello
+	$ erl -noshell -s hello hello_werld -s init stop
 
 
 Pronto! Já pode dominar o mundo Pink!
