@@ -1,20 +1,44 @@
 {{ partial "header.html" . }}
 
 <body>
-{{ partial "subheader.html" . }}
+    {{ partial "subheader.html" . }}
 
-<section id="main">
-  <div>
-      <h1 id="title">{{.Site.Title}}</h1>
-    {{ range first 10 .Data.Pages }}
-        {{ .Render "summary"}}
-    {{ end }}
-  </div>
-</section>
+    <div class="container">
+        <div class="blog-header">
+            <h1 id="blog-title">{{.Site.Title}}</h1>
+            <p class="lead blog-description">golang</p>
+        </div>
 
-<aside id="meta"></aside>
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                {{ range first 2 .Data.Pages }} {{ .Render "summary"}} {{ end }}
+            </div>
+        </div>
 
-{{ partial "footer.html" . }}
-{{ partial "footer_includes.html" . }}
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+                <h4>About</h4>
+                <p>Lorem ipsum <em>aftas ardem</em>
+                </p>
+            </div>
+            <div class="sidebar-module">
+                <h4>Archives</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">March 2014</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="sidebar-module">
+                <h4>Social</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">March 2014</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }} {{ partial "footer_includes.html" . }}
 </body>
+
 </html>
