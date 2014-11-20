@@ -10,4 +10,3 @@ params:
 
 indexes:
     tag: "tags"
-    topic: "topics"
