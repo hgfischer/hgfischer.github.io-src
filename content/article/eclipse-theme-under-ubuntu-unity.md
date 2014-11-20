@@ -1,6 +1,6 @@
 ---
+title: Eclipse theme under Ubuntu
 date: 2011-10-29T11:41
-description: ""
 tags:
 - ubuntu
 - eclipse
@@ -8,7 +8,6 @@ tags:
 - theme
 - unity
 - english
-title: Eclipse theme under Ubuntu
 ---
 
 Looks like there are a lot of complaints about Eclipse look-and-feel under Ubuntu Unity (10.10 and 11.04). The main 
