@@ -2,9 +2,10 @@
 title: Dicas de seguranca para usuários Windows
 date: 2011-02-09T21:41:00
 tags:
+- behaviour
+- portuguese
 - security
 - windows
-- portuguese
 ---
 
 Como a grande maioria dos geeks de computador, eu tenho alguns amigos e familiares que são leigos na maioria dos 

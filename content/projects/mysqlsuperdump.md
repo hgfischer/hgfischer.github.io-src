@@ -2,11 +2,10 @@
 title: MySQL Super Dump
 date: 2013-08-10T15:19:00
 tags:
-- go
+- english
 - golang
 - mysql
 - security
-- english
 ---
 
 The following text is fiction based on a true story, but it can happen with lots of development teams over the world:

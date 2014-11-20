@@ -2,15 +2,12 @@
 title: Netatalk DB_VERSION_MISMATCH
 date: 2009-06-29
 tags:
+- linux
+- mac-os-x
+- netatalk
+- portuguese
 - storage
 - time-capsule
-- time-machine
-- berkeleydb
-- netatalk
-- macosx
-- gentoo
-- linux
-- portuguese
 ---
 
 

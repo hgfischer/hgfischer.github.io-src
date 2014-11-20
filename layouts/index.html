@@ -3,10 +3,10 @@
 <body>
     {{ partial "header_menu.html" . }}
 
-	<div class="container">
-		<div class="page-header">
+    <div class="container">
+        <div class="page-header">
             <h1>{{ .Site.Title }}</h1>
-		</div>
+        </div>
 
         <div class="row">
             <div class="col-sm-8 blog-main">
@@ -16,9 +16,12 @@
             <div class="col-sm-3 col-sm-offset-1">
                 <div class="sidebar-module">
                     <h4>Tags</h4>
-					<ul class="list-group">
+                    <ul class="list-group">
                         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                        <li class="list-group-item"><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
+                        <li class="list-group-item">
+                            <span class="badge">{{ $taxonomy.Count }}</span>
+                            <a href="/topics/{{ $name | urlize }}">{{ $name }}</a>
+                        </li>
                         {{ end }}
                     </ul>
                 </div>
@@ -26,8 +29,7 @@
         </div>
     </div>
 
-    {{ partial "footer.html" . }}
-    {{ partial "footer_includes.html" . }}
+    {{ partial "footer.html" . }} {{ partial "footer_includes.html" . }}
 </body>
 
 </html>

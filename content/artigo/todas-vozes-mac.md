@@ -2,10 +2,8 @@
 title: Todas as vozes do Mac
 date: 2009-06-30
 tags:
-- say
 - text-to-speech
-- tts
-- macosx
+- mac-os-x
 - portuguese
 ---
 

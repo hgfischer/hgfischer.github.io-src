@@ -2,14 +2,13 @@
 title: Time Capsule caseiro
 date: 2009-04-30T12:45:00
 tags:
-- nas
-- storage
-- network-attached-storage
-- time-capsule
 - hardware
-- atom
-- barebone
+- linux
+- mac-os-x
+- netatalk
 - portuguese
+- storage
+- time-capsule
 ---
 
 Na atual modernidade, a maioria de nossas atividades são armazenadas de forma digital. São documentos, fotos, músicas, 

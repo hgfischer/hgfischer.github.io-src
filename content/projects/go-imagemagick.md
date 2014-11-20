@@ -2,12 +2,10 @@
 title: ImageMagick bindings for Go
 date: 2013-08-10T15:13:00
 tags:
-- go
-- golang
-- programming
-- cg
 - computer-graphics
 - english
+- golang
+- programming
 ---
 
 A few months ago I've spent some days developing my first cgo binding and the chosen library was 

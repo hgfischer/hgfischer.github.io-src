@@ -2,9 +2,9 @@
 title: Alternando a saída de som no Mac
 date: 2010-11-03T10:53:00
 tags:
-- macosx
-- sound
+- mac-os-x
 - portuguese
+- sound
 ---
 
 Utilizo um headset USB em casa para ouvir som e fazer ligações com Skype. Este tipo específico de headset

@@ -1,8 +1,7 @@
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -13,38 +12,34 @@
             </a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a>
                 </li>
                 <li><a href="#">Link</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Topics <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a>
+                        {{ range $name, $taxonomy := .Site.Taxonomies.topics }}
+                        <li><a href="/topics/{{ $name | urlize }}">{{ $name }}</a>
                         </li>
-                        <li><a href="#">Another action</a>
-                        </li>
-                        <li><a href="#">Something else here</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a>
-                        </li>
+                        {{ end }}
                     </ul>
                 </li>
             </ul>
-            <form class="navbar-form navbar-left" role="search" method="get" target="_blank"
-            action="https://www.google.com/search">
+            <form class="navbar-form navbar-left" role="search" target="_blank" action="https://www.google.com/search">
                 <div class="form-group">
-                    <input type="hidden" name="sitesearch" value="hgfischer.org">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
+					<div class="input-group">
+						<input type="hidden" name="sitesearch" value="hgfischer.org">
+						<input type="text" name="q" class="form-control" placeholder="Search...">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
+					</div>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Link</a>
@@ -65,7 +60,5 @@
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
 </nav>

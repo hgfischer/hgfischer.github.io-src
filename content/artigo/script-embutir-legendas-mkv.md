@@ -2,11 +2,12 @@
 title: Script para embutir legendas em arquivos MKV
 date: 2010-07-15T8:32:00
 tags:
-- script
 - bash
-- mkv
-- subtitles
 - portuguese
+- programming
+- script
+- subtitles
+- video
 ---
 
 Já faz algum tempo que o VLC para Mac não carrega as legendas automaticamente. Nem a última versão 1.1.0 faz isso mais. 

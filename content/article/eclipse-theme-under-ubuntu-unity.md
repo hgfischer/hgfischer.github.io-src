@@ -2,12 +2,13 @@
 title: Eclipse theme under Ubuntu
 date: 2011-10-29T11:41
 tags:
-- ubuntu
 - eclipse
-- gtk
-- theme
-- unity
 - english
+- gtk
+- linux
+- theme
+- ubuntu
+- unity
 ---
 
 Looks like there are a lot of complaints about Eclipse look-and-feel under Ubuntu Unity (10.10 and 11.04). The main 

@@ -2,9 +2,9 @@
 title: Separadores no Bash
 date: 2009-11-02T11:41:00
 tags:
-- shell
 - bash
 - portuguese
+- shell
 ---
 
 Quantas vezes já foi obrigado a refazer um script em outra linguagem quando se deparou com um _for_ que recebia valores 

@@ -2,10 +2,9 @@
 title: Cidade Flutuante
 date: 2009-11-21T18:37:00
 tags:
-- cg
+- computer-art
 - computer-graphics
-- photoshop
-- art
+- image-editing
 ---
 
 Este é o primeiro trabalho gráfico que desenvolvi junto com minha esposa e utilizando apenas fotos (nada de 3D como 

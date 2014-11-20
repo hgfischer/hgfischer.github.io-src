@@ -2,9 +2,11 @@
 title: CUDA no Mac OS X
 date: 2009-04-12T00:51:00
 tags:
-- cuda
-- macosx
+- mac-os-x
+- parallel-computing
 - portuguese
+- c-language
+- programming
 ---
 
 [CUDA](http://www.nvidia.com/object/cuda_what_is.html) é uma arquitetura para computação paralela em GPUs da NVIDIA. 

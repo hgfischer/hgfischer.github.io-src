@@ -3,9 +3,9 @@ title: Erlang no Mac OS X Leopard
 date: 2009-04-04T18:03:00-02:00
 tags:
 - erlang
-- macosx
-- desenvolvimento
+- mac-os-x
 - portuguese
+- programming
 ---
 
 [Erlang](http://pt.wikipedia.org/wiki/Erlang_\(linguagem_de_programa%C3%A7%C3%A3o\)) é uma 

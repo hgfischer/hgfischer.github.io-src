@@ -2,11 +2,11 @@
 title: Extraíndo arquivos de um RPM
 date: 2010-11-03T11:03:00
 tags:
-- rpm
-- redhat
-- sysadm
 - devops
+- linux
 - portuguese
+- rpm
+- sysadm
 ---
 
 Já me deparei com situações em que precisava de algum arquivo existente dentro de um RPM mas não queria instalá-lo. 

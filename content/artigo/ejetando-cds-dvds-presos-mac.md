@@ -2,9 +2,7 @@
 title: Ejetando CDS e DVDS presos em seu Mac
 date: 2010-01-09T12:04:00
 tags:
-- macosx
-- cds
-- dvds
+- mac-os-x
 - portuguese
 ---
 
