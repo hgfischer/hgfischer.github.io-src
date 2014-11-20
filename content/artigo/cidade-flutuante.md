@@ -13,4 +13,4 @@ nos anteriores). Utilizamos uma foto do [Mt. St. Michel](http://en.wikipedia.org
 uma foto de montanhas dos Estados Unidos para compor o elemento principal. Também utilizamos uma foto de nuvens e 
 algumas _brushes_ para compor o restante da cena.
 
-![Cidade Flutuante, by Herbert e Ester](media/cidade-flutuante-by-herbert-e-ester.jpg)
+{{% img src="/media/cidade-flutuante-by-herbert-e-ester.jpg" caption="Cidade Flutuante" %}}

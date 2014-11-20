@@ -16,3 +16,7 @@ watch:
 .PHONY: install
 install:
 	go get -v github.com/spf13/hugo
+
+.PHONY: clean
+clean:
+	rm -rf public/*

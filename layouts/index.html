@@ -3,40 +3,22 @@
 <body>
     {{ partial "header_menu.html" . }}
 
-    <div class="container">
+	<div class="container">
+		<div class="page-header">
+            <h1>{{ .Site.Title }}</h1>
+		</div>
+
         <div class="row">
-            <div class="col-sm-12">
-                <h1 id="blog-title">{{ .Site.Title }}</h1>
-            </div>
-
-            <div class="clearfix visible-xs-block"></div>
-
             <div class="col-sm-8 blog-main">
                 {{ range first 10 .Data.Pages }} {{ .Render "summary" }} {{ end }}
             </div>
 
             <div class="col-sm-3 col-sm-offset-1">
-                <div class="sidebar-module sidebar-module-inset">
-                    <h4>Search</h4>
-                    <p>
-                        <form action="https://www.google.com/search" method="get" target="_blank">
-                            <div class="post_search input-group">
-                                <input type="hidden" name="sitesearch" value="hgfischer.org">
-                                <input type="text" name="q" class="form-control">
-                                <span class="input-group-btn">
-									<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span>
-                                </button>
-                                </span>
-                            </div>
-                        </form>
-                    </p>
-                </div>
                 <div class="sidebar-module">
                     <h4>Tags</h4>
-                    <ul class="list-unstyled">
+					<ul class="list-group">
                         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                        <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a>
-                        </li>
+                        <li class="list-group-item"><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
                         {{ end }}
                     </ul>
                 </div>
