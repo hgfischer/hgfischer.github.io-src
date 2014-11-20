@@ -1,18 +1,20 @@
 ---
-date: 2013-08-10T15:13
-description: ""
+title: ImageMagick bindings for Go
+date: 2013-08-10T15:13:00
 tags:
 - go
-- desenvolvimento
-title: go imagemagick
-topics:
-- Go
-- Desenvolvimento
+- golang
+- programming
+- cg
+- computer-graphics
+- english
 ---
 
-A few months ago I've spent some days developing my first cgo binding and the chosen library was <a href="http://www.imagemagick.org/script/magick-wand.php" title="MagickWand" target="_blank">ImageMagick's MagickWand</a>.
+A few months ago I've spent some days developing my first cgo binding and the chosen library was 
+[ImageMagick's MagickWand](http://www.imagemagick.org/script/magick-wand.php).
 
-It was an interesting experience. It's relatively very easy to do such thing in Go. I'm still not using this binding in production and I hope someone can try it.
+It was an interesting experience. It's relatively very easy to do such thing in Go. I'm still not using this binding in 
+production and I hope someone can try it. I took care to port some examples from C to Go also, so that should be easier
+to start using it. And since ImageMagick is a huge library I was not able to test every function through the binding.
 
-<a href="https://github.com/gographics/imagick" title="GoGraphics Imagick" target="_blank">Go get it!</a>
-
+[go get it!](https://github.com/gographics/imagick)
