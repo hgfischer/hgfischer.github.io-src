@@ -5,13 +5,13 @@
 
     <div class="container">
         <div class="blog-header">
-            <h1 id="blog-title">{{.Site.Title}}</h1>
+            <h1 id="blog-title">{{ .Site.Title }}</h1>
             <p class="lead blog-description">golang</p>
         </div>
 
         <div class="row">
             <div class="col-sm-8 blog-main">
-                {{ range first 2 .Data.Pages }} {{ .Render "summary"}} {{ end }}
+                {{ range first 2 .Data.Pages }} {{ .Render "summary" }} {{ end }}
             </div>
         </div>
 

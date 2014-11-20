@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<body>
+    {{ partial "subheader.html" . }}
+
+    <div class="container">
+        <div class="blog-header">
+            <h1 id="blog-title">{{ .Site.Title }}</h1>
+            <p class="lead blog-description">golang</p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 blog-main">
+                <h1>Nothing to see here</h1>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }} {{ partial "footer_includes.html" . }}
+</body>
+
+</html>

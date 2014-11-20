@@ -1,20 +1,17 @@
-THEME      := 
-DRAFTS     := true
-FUTURE     := true
-CMD_THEME  := 
-CMD_DRAFTS := "--buildDrafts=$(DRAFTS)"
-CMD_FUTURE := "--buildFuture=$(FUTURE)"
+DRAFTS := true
+FUTURE := true
+CMD    := -v --verboseLog --log --buildDrafts=$(DRAFTS) --buildFuture=$(FUTURE)
 
 .PHONY: default
 default: build
 
 .PHONY: build
 build:
-	hugo $(CMD_THEME) $(CMD_DRAFTS) $(CMD_FUTURE)
+	hugo -v $(CMD)
 
 .PHONY: watch
 watch:
-	hugo server --watch $(CMD_THEME) $(CMD_DRAFTS) $(CMD_FUTURE)
+	hugo -v server --watch $(CMD)
 
 .PHONY: install
 install:
