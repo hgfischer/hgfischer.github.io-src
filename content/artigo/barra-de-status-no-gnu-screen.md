@@ -1,12 +1,11 @@
 ---
+title: Barra de Status no GNU Screen
 date: 2009-04-08T22:29:00
-description: ""
 tags:
 - linux
 - shell
 - screen
-- pt_BR
-title: Barra de Status no GNU Screen
+- portuguese
 ---
 
 [GNU Screen](http://www.gnu.org/software/screen/) é um gerenciador de terminais virtuais para a linha de comando. Seu 
