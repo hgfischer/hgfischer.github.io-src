@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-<head>
-	<meta charset="utf-8">
-	<title>{{ .Site.Title }}</title>
-    {{ partial "meta.html" . }}
-    <base href="{{ .Site.BaseUrl }}">
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ partial "header_includes.html" . }}
-</head>
+{{ partial "header.html" . }}
 
 <body>
 {{ partial "subheader.html" . }}
