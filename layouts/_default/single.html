@@ -1,18 +1,29 @@
 {{ partial "header.html" . }}
-<body lang="en" itemscope itemtype="http://schema.org/Article">
-{{ partial "subheader.html" . }}
-{{ $baseurl := .Site.BaseUrl }}
 
-<section id="main">
-  <h1 itemprop="name" id="title">{{ .Title }}</h1>
-  <div>
-        <article itemprop="articleBody" id="content">
-           {{ .Content }}
-        </article>
-  </div>
-</section>
+<body itemscope itemtype="http://schema.org/Article">
+	{{ partial "subheader.html" . }} 
+	{{ $baseurl := .Site.BaseUrl }}
 
-{{ partial "meta_aside.html" . }}
+	<div class="container">
+		<div class="blog-header">
+			<h1 itemprop="name" id="title" class="blog-title">
+				{{ .Title }}
+			</h1>
+		</div>
 
-{{ partial "disqus.html" . }}
-{{ partial "footer.html" . }}
+		<div class="row">
+			<div class="col-sm-8 blog-main">
+				<p itemprop="articleBody" id="content">
+					{{ .Content }} 
+				</p>
+			</div>
+		</div>
+
+		{{ partial "post_meta.html" . }} 
+		{{ partial "disqus.html" . }} 
+	</div>
+
+	{{ partial "footer.html" . }}
+	{{ partial "footer_includes.html" . }}
+</body>
+</html>
