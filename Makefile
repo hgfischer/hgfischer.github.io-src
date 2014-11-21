@@ -1,18 +1,17 @@
-DRAFTS       := true
-FUTURE       := true
-CMD          := -v --verboseLog --log --buildDrafts=$(DRAFTS) --buildFuture=$(FUTURE)
-
 .PHONY: default
-default: theme build
+default: build
 
 .PHONY: build
-build: 
-	hugo -v $(CMD)
+build:
+	hugo -v --buildDrafts
 
 .PHONY: watch
-watch: theme
-	$(GRUNT) watch &
-	hugo -v server --watch $(CMD)
+watch: 
+	nice hugo -v server --watch --buildDrafts
+
+.PHONY: dist
+dist: theme
+	hugo -v 
 
 .PHONY: install
 install:
@@ -24,7 +23,7 @@ clean:
 	rm -rf node_modules/
 
 npm_install:
-	npm install --save-dev
+	npm install
 
 GRUNT := node_modules/grunt-cli/bin/grunt
 $(GRUNT): npm_install

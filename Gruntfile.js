@@ -87,17 +87,22 @@ module.exports = function(grunt) {
         },
 
         watch: {
+			tasks: 'shell:touch',
             less: {
                 files: 'less/**/*.less',
-                tasks: 'less'
-            }
+                tasks: 'theme'
+            },
+			options: {
+				spawn: false,
+				debounceDelay: 10
+			}
         },
 
-        exec: {
-            npmUpdate: {
-                command: 'npm update'
-            }
-        }
+		shell: {
+			touch: {
+				command: 'touch content/about.md'
+			}
+		}
     });
 
 
