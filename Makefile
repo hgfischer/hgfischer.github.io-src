@@ -1,16 +1,17 @@
-DRAFTS := true
-FUTURE := true
-CMD    := -v --verboseLog --log --buildDrafts=$(DRAFTS) --buildFuture=$(FUTURE)
+DRAFTS       := true
+FUTURE       := true
+CMD          := -v --verboseLog --log --buildDrafts=$(DRAFTS) --buildFuture=$(FUTURE)
 
 .PHONY: default
-default: build
+default: theme build
 
 .PHONY: build
-build:
+build: 
 	hugo -v $(CMD)
 
 .PHONY: watch
-watch:
+watch: theme
+	$(GRUNT) watch &
 	hugo -v server --watch $(CMD)
 
 .PHONY: install
@@ -20,12 +21,23 @@ install:
 .PHONY: clean
 clean:
 	rm -rf public/*
+	rm -rf node_modules/
 
+npm_install:
+	npm install --save-dev
 
 GRUNT := node_modules/grunt-cli/bin/grunt
-$(GRUNT):
-	npm install --save-dev
+$(GRUNT): npm_install
+
+BOOTLINT := node_modules/bootlint/bin/bootlint
+$(BOOTLINT): npm_install
 
 .PHONY: bootlint
 bootlint: $(GRUNT)
-	find public/ -type f -name '*.html' -exec node_modules/.bin/bootlint {} \;
+	find public/ -type f -name '*.html' -exec $(BOOTLINT) {} \;
+
+theme: $(GRUNT)
+	$(GRUNT) theme
+
+bwatch: $(GRUNT)
+	$(GRUNT) watch
