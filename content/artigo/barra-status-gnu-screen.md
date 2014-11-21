@@ -1,6 +1,6 @@
 ---
 title: Barra de Status no GNU Screen
-date: 2009-04-08T22:29:00
+date: 2008-12-08T22:29:00
 tags:
 - linux
 - portuguese

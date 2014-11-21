@@ -1,0 +1,19 @@
+<div>
+	<h2>
+		<a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</a>
+	</h2>
+
+    <blockquote>
+        <p class="small">
+            {{ .Date.Format "02/01/2006" }}
+        </p>
+        <p class="text-justify">
+            {{ .Summary }}
+        </p>
+		<footer>
+            <a href="{{ .Permalink }}">
+                <nobr>Continue lendo →</nobr>
+            </a>
+        </footer>
+    </blockquote>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: Extraíndo arquivos de um RPM
-date: 2010-11-03T11:03:00
+date: 2011-01-03T11:03:00
 tags:
 - devops
 - linux

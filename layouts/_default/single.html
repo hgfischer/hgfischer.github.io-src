@@ -1,29 +1,79 @@
 {{ partial "header.html" . }}
 
 <body itemscope itemtype="http://schema.org/Article">
-	{{ partial "header_menu.html" . }} 
-	{{ $baseurl := .Site.BaseUrl }}
+    {{ partial "header_menu.html" . }} {{ $baseurl := .Site.BaseUrl }}
+    <meta itemprop="wordCount" content="{{ .WordCount }}">
+    <meta itemprop="datePublished" content="{{ .Date.Format " 2006-01-02 " }}">
+    <meta itemprop="url" content="{{ .Permalink }}">
 
-	<div class="container">
-		<div class="blog-header">
-			<h1 itemprop="name" id="title" class="blog-title">
-				{{ .Title }}
-			</h1>
-		</div>
+    <div class="container">
+        <div class="page-header">
+            <h1 itemprop="name" id="title">{{ .Title }}</h1>
+        </div>
 
-		<div class="row">
-			<div class="col-sm-8 blog-main">
-				<p itemprop="articleBody" id="content">
-					{{ .Content }} 
-				</p>
-			</div>
-		</div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <small>
+            				{{ .Date.Format "Mon Jan 2, 2006" }},
+            				{{ .FuzzyWordCount }} words,
+							read in about {{ .ReadingTime }} mins.
+						</small>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        {{ range .Params.tags }}
+                        <span class="label label-default">{{ . }}</span>
+                        {{ end }}
+                    </div>
+				</div>
+				<hr>
+                <p itemprop="articleBody text-justify">
+                    {{ .Content }}
+                </p>
+                <div class="row">
+                    <div class="col-sm-12">
+                    	<nav>
+                    	    <ul class="pager">
+                    	        {{ if .Prev }}
+                    	        <li class="previous">
+                    	            <a class="previous" href="{{ .Prev.Permalink }}">
+                    	                <span aria-hidden="true">&larr;</span>&nbsp;{{ .Prev.Title }}
+                    	            </a>
+                    	        </li>
+								{{ end }}
+								{{ if .Next }}
+                    	        <li class="next">
+                    	            <a class="next" href="{{ .Next.Permalink }}">
+										{{ .Next.Title }}&nbsp;<span aria-hidden="true">&rarr;</span>
+									</a>
+                    	        </li>
+                    	        {{ end }}
+                    	    </ul>
+						</nav>
+					</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+						{{ partial "disqus.html" . }} 
+					</div>
+				</div>
+            </div>
 
-		{{ partial "post_meta.html" . }} 
-		{{ partial "disqus.html" . }} 
-	</div>
+        	<div class="col-sm-3 col-sm-offset-1">
+        	    <div>
+        	        <h4>Share</h4>
+        	        <ul class="list-group">
+        	            <li class="list-group-item">Pocket</lib>
+        	                <li class="list-group-item">Facebook</lib>
+        	        </ul>
+        	    </div>
+        	</div>
+        </div>
+    </div>
 
-	{{ partial "footer.html" . }}
+	{{ partial "footer.html" . }} 
 	{{ partial "footer_includes.html" . }}
 </body>
+
 </html>

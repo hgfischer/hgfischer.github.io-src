@@ -1,6 +1,6 @@
 ---
 title: Todas as vozes do Mac
-date: 2009-06-30
+date: 2008-06-30
 tags:
 - text-to-speech
 - mac-os-x
