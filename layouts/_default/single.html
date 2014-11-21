@@ -36,14 +36,14 @@
                     	<nav>
                     	    <ul class="pager">
                     	        {{ if .Prev }}
-                    	        <li class="previous">
+                    	        <li class="previous small">
                     	            <a class="previous" href="{{ .Prev.Permalink }}">
                     	                <span aria-hidden="true">&larr;</span>&nbsp;{{ .Prev.Title }}
                     	            </a>
                     	        </li>
 								{{ end }}
 								{{ if .Next }}
-                    	        <li class="next">
+                    	        <li class="next small">
                     	            <a class="next" href="{{ .Next.Permalink }}">
 										{{ .Next.Title }}&nbsp;<span aria-hidden="true">&rarr;</span>
 									</a>
