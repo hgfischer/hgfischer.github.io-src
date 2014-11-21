@@ -54,7 +54,7 @@ bwatch: $(GRUNT)
 	$(GRUNT) watch
 
 html_minify: $(HTMLMINIFY)
-	find public/ -type f -name '*.html' -print -exec \
+	@find public/ -type f -name '*.html' -print -exec \
 		$(HTMLMINIFY) \
 			--remove-comments \
 			--collapse-whitespace \
@@ -67,4 +67,7 @@ html_minify: $(HTMLMINIFY)
 			--remove-optional-tags \
 			--remove-empty-elements \
 			{} -o {} \;
+
+htmllint: draft html_minify
+	$(GRUNT) htmllint
 

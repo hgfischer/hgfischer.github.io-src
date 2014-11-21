@@ -11,6 +11,7 @@
     "grunt-contrib-less": "~0.12.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-csscomb": "~3.0.0",
+    "grunt-html": "^1.4.0",
     "grunt-shell": "^1.1.1",
     "grunt-shell-spawn": "^0.3.0",
     "html-minifier": "^0.6.9",

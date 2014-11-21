@@ -102,6 +102,10 @@ module.exports = function(grunt) {
 			touch: {
 				command: 'touch content/about.md'
 			}
+		},
+
+		htmllint: {
+			all: [ 'public/**/*.html' ]
 		}
     });
 
