@@ -16,6 +16,10 @@ watch:
 .PHONY: dist
 dist: theme build html_minify
 
+.PHONY: publish
+publish: dist
+	rsync -avz --delete --verbose -e ssh public/ herbert@hgfischer.org:/home/sites/hgfischer/htdocs/
+
 .PHONY: deps
 deps: $(HUGO)
 	npm install
