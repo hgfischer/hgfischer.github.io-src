@@ -69,7 +69,6 @@ html_minify: $(HTMLMINIFY)
 			--use-short-doctype \
 			--remove-empty-attributes \
 			--remove-optional-tags \
-			--remove-empty-elements \
 			{} -o {} \;
 
 htmllint: draft html_minify
