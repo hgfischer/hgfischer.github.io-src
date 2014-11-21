@@ -1,17 +1,20 @@
 .PHONY: default
-default: build
+default: draft
+
+.PHONY: draft
+draft:
+	hugo -v --buildDrafts
 
 .PHONY: build
 build:
-	hugo -v --buildDrafts
+	hugo -v 
 
 .PHONY: watch
 watch: 
 	nice hugo -v server --watch --buildDrafts
 
 .PHONY: dist
-dist: theme
-	hugo -v 
+dist: theme build html_minify
 
 .PHONY: deps
 deps: $(HUGO)
