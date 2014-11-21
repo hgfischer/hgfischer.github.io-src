@@ -4,10 +4,6 @@
     {{ partial "header_menu.html" . }}
 
     <div class="container">
-        <div class="page-header">
-            <h1>{{ .Site.Title }}</h1>
-        </div>
-
         <div class="row">
             <div class="col-sm-8">
                 {{ range first 10 .Data.Pages }} {{ .Render "summary" }} {{ end }}
