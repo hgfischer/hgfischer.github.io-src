@@ -1,16 +1,23 @@
 {{ partial "header.html" . }}
-<body lang="en">
-{{ partial "header_menu.html" . }}
 
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-    {{ range .Data.Pages }}
-        {{ .Render "summary"}}
-    {{ end }}
-  </div>
-</section>
+<body>
+	{{ partial "header_menu.html" . }}
 
-<aside id="meta"> </aside>
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ .Title }}</h1>
+        </div>
 
-{{ partial "footer.html" . }}
+        <div class="row">
+            <div class="col-sm-12">
+                {{ range .Data.Pages }} {{ .Render "summary" }} {{ end }}
+			</div>
+        </div>
+    </div>
+
+	{{ partial "footer.html" . }}
+	{{ partial "footer_includes.html" . }}
+</body>
+
+</html>
+
