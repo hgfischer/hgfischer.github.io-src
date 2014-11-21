@@ -22,4 +22,4 @@ Based on this true story I've decided to make a program to solve this problem. T
 in a few hours, but I got trapped in text encoding problems of Python and MySQLdb library. So I've decided to rewrite 
 it using Go.
 
-[go get it!](https://github.com/hgfischer/mysqlsuperdump)
+* [Github](https://github.com/hgfischer/mysqlsuperdump)

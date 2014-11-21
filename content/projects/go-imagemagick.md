@@ -15,4 +15,5 @@ It was an interesting experience. It's relatively very easy to do such thing in 
 production and I hope someone can try it. I took care to port some examples from C to Go also, so that should be easier
 to start using it. And since ImageMagick is a huge library I was not able to test every function through the binding.
 
-[go get it!](https://github.com/gographics/imagick)
+* [Github](https://github.com/gographics/imagick)
+* [Documentation](https://gowalker.org/github.com/gographics/imagick/imagick)
