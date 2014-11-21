@@ -14,8 +14,7 @@ dist: theme
 	hugo -v 
 
 .PHONY: deps
-deps: 
-	go get -v github.com/spf13/hugo
+deps: $(HUGO)
 	npm install
 
 .PHONY: updeps
@@ -28,11 +27,18 @@ clean:
 	rm -rf public/*
 	rm -rf node_modules/
 
-GRUNT := node_modules/grunt-cli/bin/grunt
+HUGO := $GOBIN/hugo
+$(HUGO):
+	go get -v github.com/spf13/hugo
+
+GRUNT := node_modules/.bin/grunt
 $(GRUNT): deps
 
-BOOTLINT := node_modules/bootlint/bin/bootlint
+BOOTLINT := node_modules/.bin/bootlint
 $(BOOTLINT): deps
+
+HTMLMINIFY := node_modules/.bin/html-minifier
+$(HTMLMINIFY): deps
 
 .PHONY: bootlint
 bootlint: $(GRUNT)
@@ -43,3 +49,19 @@ theme: $(GRUNT)
 
 bwatch: $(GRUNT)
 	$(GRUNT) watch
+
+html_minify: $(HTMLMINIFY)
+	find public/ -type f -name '*.html' -print -exec \
+		$(HTMLMINIFY) \
+			--remove-comments \
+			--collapse-whitespace \
+			--conservative-collapse \
+			--collapse-boolean-attributes \
+			--remove-attribute-quotes \
+			--remove-redundant-attributes \
+			--use-short-doctype \
+			--remove-empty-attributes \
+			--remove-optional-tags \
+			--remove-empty-elements \
+			{} -o {} \;
+
