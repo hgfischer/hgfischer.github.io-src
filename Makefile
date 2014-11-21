@@ -13,23 +13,26 @@ watch:
 dist: theme
 	hugo -v 
 
-.PHONY: install
-install:
+.PHONY: deps
+deps: 
 	go get -v github.com/spf13/hugo
+	npm install
+
+.PHONY: updeps
+updeps:
+	go get -v -u github.com/spf13/hugo
+	npm update
 
 .PHONY: clean
 clean:
 	rm -rf public/*
 	rm -rf node_modules/
 
-npm_install:
-	npm install
-
 GRUNT := node_modules/grunt-cli/bin/grunt
-$(GRUNT): npm_install
+$(GRUNT): deps
 
 BOOTLINT := node_modules/bootlint/bin/bootlint
-$(BOOTLINT): npm_install
+$(BOOTLINT): deps
 
 .PHONY: bootlint
 bootlint: $(GRUNT)

@@ -13,6 +13,7 @@
     "grunt-csscomb": "~3.0.0",
     "grunt-shell": "^1.1.1",
     "grunt-shell-spawn": "^0.3.0",
+    "html-minifier": "^0.6.9",
     "load-grunt-tasks": "~1.0.0",
     "time-grunt": "~1.0.0"
   },
