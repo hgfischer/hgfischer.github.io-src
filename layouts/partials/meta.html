@@ -9,10 +9,10 @@
 <meta name="keywords" content="{{ if .Keywords }}{{ range .Keywords }}{{ . }}, {{ end }}{{else if isset .Params "tags" }}{{ range .Params.tags }}{{ . }}, {{ end }}{{end}}">
 
 <meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ .Description }}">
-<meta property="og:image" content="/img/gopher/talks.png">
+<meta property="og:image" content="{{ .Site.BaseUrl }}/img/gopher/talks.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="132">
 <meta property="og:image:height" content="100">

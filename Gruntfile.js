@@ -12,11 +12,11 @@ module.exports = function(grunt) {
                     strictMath: true,
                     sourceMap: true,
                     outputSourceFiles: true,
-                    sourceMapURL: 'bootstrap.css.map',
-                    sourceMapFilename: 'static/css/bootstrap.css.map'
+                    sourceMapURL: 'styles.css.map',
+                    sourceMapFilename: 'static/css/styles.css.map'
                 },
                 src: 'less/bootstrap.less',
-                dest: 'static/css/bootstrap.css'
+                dest: 'static/css/styles.css'
             },
             compileTheme: {
                 options: {
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
                 options: {
                     map: true
                 },
-                src: 'static/css/bootstrap.css'
+                src: 'static/css/styles.css'
             },
             theme: {
                 options: {
@@ -65,8 +65,8 @@ module.exports = function(grunt) {
                 noAdvanced: true
             },
             minifyCore: {
-                src: 'static/css/bootstrap.css',
-                dest: 'static/css/bootstrap.min.css'
+                src: 'static/css/styles.css',
+                dest: 'static/css/styles.min.css'
             },
             minifyTheme: {
                 src: 'static/css/theme.css',

@@ -14,5 +14,7 @@
 
     {{ partial "header_includes.html" . }}
     <link rel="shortcut icon" href="/favicon.ico?{{.Now.UnixNano}}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?{{.Now.UnixNano}}">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png?{{.Now.UnixNano}}">
+	<link rel="prefetch" href="/fonts/glyphicons-halflings-regular.woff">
+	<link rel="prerender" href="/fonts/glyphicons-halflings-regular.woff">
 </head>
