@@ -21,14 +21,11 @@ install:
 clean:
 	rm -rf public/*
 
-.PHONY: setup_grunt
-setup_grunt:
+
+GRUNT := node_modules/grunt-cli/bin/grunt
+$(GRUNT):
 	npm install --save-dev
 
-.PHONY: grunt
-grunt:
-	./node_modules/grunt-cli/bin/grunt
-
 .PHONY: bootlint
-bootlint:
+bootlint: $(GRUNT)
 	find public/ -type f -name '*.html' -exec node_modules/.bin/bootlint {} \;
