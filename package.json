@@ -1,0 +1,15 @@
+{
+  "name": "hgfischer.org",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "devDependencies": {
+    "bootlint": "^0.8.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:hgfischer/hgfischer.org.git"
+  },
+  "author": "Herbert G. Fischer"
+}
