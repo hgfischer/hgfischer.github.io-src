@@ -14,17 +14,8 @@
             <ul class="nav navbar-nav">
 				<li><a href="/article/">English Posts</a></li>
                 <li><a href="/artigo/">Artigos em Português</a></li>
-                <li class="dropdown">
-					<a href="/tags/" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-						aria-expanded="false">Tags <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                        <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </li>
                 <li><a href="/projects">Projects</a></li>
+                <li><a href="/tags/">Tags</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" target="_blank" action="https://www.google.com/search">
                 <div class="form-group">
