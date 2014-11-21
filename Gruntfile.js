@@ -7,16 +7,27 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         less: {
+            compileCore: {
+                options: {
+                    strictMath: true,
+                    sourceMap: true,
+                    outputSourceFiles: true,
+                    sourceMapURL: 'bootstrap.css.map',
+                    sourceMapFilename: 'static/css/bootstrap.css.map'
+                },
+                src: 'less/bootstrap.less',
+                dest: 'static/css/bootstrap.css'
+            },
             compileTheme: {
                 options: {
                     strictMath: true,
                     sourceMap: true,
                     outputSourceFiles: true,
-                    sourceMapURL: 'site-theme.css.map',
-                    sourceMapFilename: 'static/css/site-theme.css.map'
+                    sourceMapURL: 'theme.css.map',
+                    sourceMapFilename: 'static/css/theme.css.map'
                 },
                 src: 'less/theme.less',
-                dest: 'static/css/site-theme.css'
+                dest: 'static/css/theme.css'
             }
         },
 
@@ -33,21 +44,18 @@ module.exports = function(grunt) {
                     "Safari >= 6"
                 ]
             },
+            core: {
+                options: {
+                    map: true
+                },
+                src: 'static/css/bootstrap.css'
+            },
             theme: {
                 options: {
                     map: true
                 },
-                src: 'static/css/site-theme.css'
+                src: 'static/css/theme.css'
             }
-        },
-
-        csslint: {
-            options: {
-                csslintrc: 'less/.csslintrc'
-            },
-            dist: [
-                'static/css/bootstrap-theme.css'
-            ]
         },
 
         cssmin: {
@@ -56,9 +64,13 @@ module.exports = function(grunt) {
                 keepSpecialComments: '*',
                 noAdvanced: true
             },
+            minifyCore: {
+                src: 'static/css/bootstrap.css',
+                dest: 'static/css/bootstrap.min.css'
+            },
             minifyTheme: {
-                src: 'static/css/site-theme.css',
-                dest: 'static/css/site-theme.min.css'
+                src: 'static/css/theme.css',
+                dest: 'static/css/theme.min.css'
             }
         },
 
@@ -95,5 +107,13 @@ module.exports = function(grunt) {
 
     require('time-grunt')(grunt);
 
-    grunt.registerTask('theme', ['less:compileTheme', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyTheme']);
+    grunt.registerTask('theme', [
+		'less:compileCore', 
+		'less:compileTheme', 
+		'autoprefixer:core', 
+		'autoprefixer:theme', 
+		'csscomb:dist', 
+		'cssmin:minifyCore',
+		'cssmin:minifyTheme'
+	]);
 };
