@@ -26,64 +26,113 @@
                         <span class="label label-default">{{ . }}</span>
                         {{ end }}
                     </div>
-				</div>
-				<hr>
+                </div>
+                <hr>
                 <p itemprop="articleBody text-justify">
                     {{ .Content }}
-				</p>
-				<hr>
-                <div class="row">
-					<div class="col-sm-12">
-						Herbert G. Fischer is a software enginner with more than 17 years of professional experience.
-						He is a open-source contributor and author of a few projects at Github, Google Code and BitBucket. 
-						You can find him on <a href="http://twitter.com/hgfischer" target="_blank">Twitter</a>,
-            			<a href="http://github.com/hgfischer" target="_blank">Github</a>,
-						<a rel="author" href="https://plus.google.com/+HerbertFischer/" target="_blank">Google+</a> and
-						<a href="http://br.linkedin.com/in/hgfischer" target="_blank">LinkedIn</a>.
-					</div>
-				</div>
+                </p>
+                <hr>
                 <div class="row">
                     <div class="col-sm-12">
-                    	<nav>
-                    	    <ul class="pager">
-                    	        {{ if .Prev }}
-                    	        <li class="previous small">
-                    	            <a class="previous" href="{{ .Prev.Permalink }}">
-                    	                <span aria-hidden="true">&larr;</span>&nbsp;{{ .Prev.Title }}
-                    	            </a>
-                    	        </li>
-								{{ end }}
-								{{ if .Next }}
-                    	        <li class="next small">
-                    	            <a class="next" href="{{ .Next.Permalink }}">
-										{{ .Next.Title }}&nbsp;<span aria-hidden="true">&rarr;</span>
-									</a>
-                    	        </li>
-                    	        {{ end }}
-                    	    </ul>
-						</nav>
-					</div>
+                        Herbert G. Fischer is a software enginner with more than 17 years of professional
+                        experience. He is a open-source contributor and author
+                        of a few projects at Github, Google Code and BitBucket.
+                        You can find him on <a href="http://twitter.com/hgfischer"
+                        target="_blank">Twitter</a>,
+                        <a href="http://github.com/hgfischer" target="_blank">Github</a>,
+                        <a rel="author" href="https://plus.google.com/+HerbertFischer/" target="_blank">Google+</a> and
+                        <a href="http://www.linkedin.com/in/hgfischer" target="_blank">LinkedIn</a>.
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-						{{ partial "disqus.html" . }} 
-					</div>
-				</div>
+                        <nav>
+                            <ul class="pager">
+                                {{ if .Prev }}
+                                <li class="previous small">
+                                    <a class="previous" href="{{ .Prev.Permalink }}">
+										<span aria-hidden="true">&larr;</span>
+										&nbsp;{{ .Prev.Title }}
+                                    </a>
+                                </li>
+                                {{ end }} {{ if .Next }}
+                                <li class="next small">
+                                    <a class="next" href="{{ .Next.Permalink }}">
+										{{ .Next.Title }}&nbsp;<span aria-hidden="true">&rarr;</span>
+									</a>
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        {{ partial "disqus.html" . }}
+                    </div>
+                </div>
             </div>
 
-        	<div class="col-sm-3 col-sm-offset-1">
-        	    <div>
-        	        <h4>Share</h4>
-        	        <ul class="list-group">
-        	            <li class="list-group-item">Pocket</lib>
-        	                <li class="list-group-item">Facebook</lib>
-        	        </ul>
-        	    </div>
-        	</div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <div>
+                    <h4>Share</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="https://twitter.com/intent/tweet?status={{ .Title }}: {{ .Permalink }}"
+                            target="_blank" class="twitter"><span class="icon icon-twitter"></span>Twitter</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://www.reddit.com/submit?url={{ .Permalink }}" target="_blank" title="Reddit"
+                            class="reddit"><span class="icon icon-reddit"></span>Reddit</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://del.icio.us/post?url={{ .Permalink }}" target="_blank" title="Delicious"
+                            class="delicious"><span class="icon icon-delicious"></span>Delicious</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://plus.google.com/share?url={{ .Permalink }}" target="_blank" title="Google+"
+                            class="googleplus"><span class="icon icon-google-plus"></span>Google+</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&source=hgfischer"
+                            target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"
+                            class="facebook"><span class="icon icon-facebook"></span>Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Follow</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+							<a href="http://feeds.feedburner.com/hgfischer" target="_blank"
+                            title="Subscribe by RSS" class="rss"><span class="icon icon-feed-2"></span>RSS</a> 
+                        </li>
+                        <li class="list-group-item">
+							<a href="http://github.com/hgfischer" target="_blank" title="GitHub"
+                            class="github"><span class="icon icon-github"></span>GitHub</a> 
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://www.twitter.com/hgfischer" target="_blank" title="Follow me on Twitter"
+                            class="twitter"><span class="icon icon-twitter"></span>Twitter</a>
+                        </li>
+                        <li class="list-group-item">
+							<a href="https://https://plus.google.com/+HerbertFischer/" target="_blank"
+                            title="Google+" class="googleplus"><span class="icon icon-google-plus"></span>Google+</a> 
+                        </li>
+                        <li class="list-group-item">
+							<a href="http://www.linkedin.com/in/hgfischer" target="_blank"
+                            title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-	{{ partial "footer.html" . }} 
+	{{ partial "footer.html" . }}
 	{{ partial "footer_includes.html" . }}
 </body>
 
