@@ -3,7 +3,7 @@
 		<a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</a>
 	</h2>
 
-    <blockquote>
+    <div>
         <p class="small">
             {{ .Date.Format "Mon, Jan 2, 2006" }}
         </p>
@@ -15,5 +15,5 @@
                 <nobr>Read more →</nobr>
             </a>
         </footer>
-    </blockquote>
+    </div>
 </div>
