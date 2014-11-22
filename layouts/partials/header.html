@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
 <head>
+	{{ if eq .Title .Site.Title }}
 	<title>{{ .Title }}</title>
-
-	{{ partial "meta.html" . }}
-
+	{{ else }}
+	<title>{{ .Title }} :: {{ .Site.Title }}</title>
+	{{ end }}
+    {{ partial "meta.html" . }}
     <base href="{{ .Site.BaseUrl }}">
 	<link rel="canonical" href="{{ .Permalink }}">
-
 	{{ if .RSSlink }}
 	<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}">
 	{{ end }}
-
-    {{ partial "header_includes.html" . }}
+	{{ partial "header_includes.html" . }}
     <link rel="shortcut icon" href="/favicon.ico?{{.Now.UnixNano}}" type="image/x-icon">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png?{{.Now.UnixNano}}">
-	<link rel="prefetch" href="/fonts/glyphicons-halflings-regular.woff">
-	<link rel="prerender" href="/fonts/glyphicons-halflings-regular.woff">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?{{.Now.UnixNano}}">
+    <link rel="prefetch" href="/fonts/glyphicons-halflings-regular.woff">
+    <link rel="prerender" href="/fonts/glyphicons-halflings-regular.woff">
 </head>
