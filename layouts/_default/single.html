@@ -1,6 +1,13 @@
 {{ partial "header.html" . }}
 
 <body>
+	<script>
+	window.fbAsyncInit = function() { FB.init({ appId: '303471599851367', xfbml: true, version: 'v2.2' }); };
+	(function(d, s, id){ var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+	</script>
+
     {{ partial "header_menu.html" . }} {{ $baseurl := .Site.BaseUrl }}
     <meta itemprop="wordCount" content="{{ .WordCount }}">
     <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
@@ -78,7 +85,7 @@
             <div class="col-sm-3 col-sm-offset-1">
                 <div>
                     <h4>Share</h4>
-                    <ul class="list-group">
+					<ul class="list-group">
                         <li class="list-group-item">
                             <a href="https://twitter.com/intent/tweet?status={{ .Title }}: {{ .Permalink }}"
                             target="_blank" class="twitter"><span class="icon icon-twitter"></span>Twitter</a>
@@ -100,8 +107,9 @@
                             target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"
-                            class="facebook"><span class="icon icon-facebook"></span>Facebook</a>
+							<div id="fb-root"></div>
+							<div class="fb-like" data-href="{{ .Permalink }}" data-layout="button" 
+								data-action="like" data-show-faces="true" data-share="true"></div>
                         </li>
                     </ul>
                 </div>
