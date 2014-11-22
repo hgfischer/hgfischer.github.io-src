@@ -5,6 +5,6 @@ copyright: "Copyright (c) 1997-2014, Herbert G. Fischer; all rights reserved."
 MetaDataFormat: "yaml"
 disqusShortname: "hgfischer"
 params:
-    Author: "Herbert G. Fischer"
+    Author: "Herbert Fischer"
 indexes:
     tag: "tags"
