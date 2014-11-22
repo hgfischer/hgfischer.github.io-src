@@ -6,6 +6,7 @@ tags:
 - golang
 - mysql
 - security
+- database
 ---
 
 The following text is fiction based on a true story, but it can happen with lots of development teams over the world:

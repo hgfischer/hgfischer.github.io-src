@@ -4,6 +4,8 @@ date: 2014-11-20T22:12:13-02:00
 tags:
 - english
 - golang
+- one-time-password
+- security
 ---
 
 Package go-otp implements one-time-password generators used in 2-factor authentication systems like RSA-tokens. 
