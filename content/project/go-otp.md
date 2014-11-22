@@ -1,6 +1,7 @@
 ---
 title: Go-OTP
 description: Package that implements one-time-passwords in Go (a.k.a. golang)
+image_uri: /img/gopher/talks.png
 date: 2014-11-20T22:12:13-02:00
 tags:
 - golang
