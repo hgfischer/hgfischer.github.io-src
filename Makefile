@@ -15,6 +15,8 @@ watch:
 
 .PHONY: dist
 dist: theme build html_minify
+	find public/ -type f -exec chmod 0644 {} \;
+	find public/ -type d -exec chmod 0755 {} \;
 
 .PHONY: publish
 publish: dist
