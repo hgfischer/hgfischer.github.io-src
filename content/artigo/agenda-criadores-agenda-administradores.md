@@ -1,9 +1,9 @@
 ---
 title: Agenda dos Criadores, Agenda dos Administradores
+description: Tradução de "Maker's Schedule, Manager's Schedule" de Paul Graham
 date: 2009-08-04T17:16:00
 tags:
 - behaviour
-- portuguese
 ---
 
 Tradução do texto [Maker's Schedule, Manager's Schedule](http://www.paulgraham.com/makersschedule.html) do Paul Graham.

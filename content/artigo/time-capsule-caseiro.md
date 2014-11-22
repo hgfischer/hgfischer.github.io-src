@@ -1,12 +1,12 @@
 ---
 title: Time Capsule caseiro
+description: Como montar um Time Capsule caseiro que também pode servir como storage para outras plataformas
 date: 2009-04-30T12:45:00
 tags:
 - hardware
 - linux
 - mac-os-x
 - netatalk
-- portuguese
 - storage
 - time-capsule
 ---

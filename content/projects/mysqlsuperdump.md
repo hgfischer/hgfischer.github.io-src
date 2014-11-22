@@ -1,8 +1,8 @@
 ---
 title: MySQL Super Dump
+description: Software to create secure database dumps from MySQL, made in Go (a.k.a. golang)
 date: 2013-08-10T15:19:00
 tags:
-- english
 - golang
 - mysql
 - security

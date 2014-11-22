@@ -1,9 +1,9 @@
 ---
 title: Eclipse theme under Ubuntu
+description: How to fix Eclipse appearance in Ubuntu's Unity
 date: 2011-10-29T11:41:00
 tags:
 - eclipse
-- english
 - gtk
 - linux
 - theme

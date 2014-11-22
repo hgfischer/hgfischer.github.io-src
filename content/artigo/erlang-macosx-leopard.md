@@ -1,10 +1,10 @@
 ---
 title: Erlang no Mac OS X Leopard
+description: Como instalar o Erlang no Mac
 date: 2009-04-04T18:03:00-02:00
 tags:
 - erlang
 - mac-os-x
-- portuguese
 - programming
 ---
 

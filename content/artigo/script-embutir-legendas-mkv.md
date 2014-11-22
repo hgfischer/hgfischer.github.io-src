@@ -1,9 +1,9 @@
 ---
 title: Script para embutir legendas em arquivos MKV
+description: Como embutir legendas em arquivos MKV
 date: 2010-07-15T8:32:00
 tags:
 - bash
-- portuguese
 - programming
 - script
 - subtitles

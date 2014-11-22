@@ -1,9 +1,9 @@
 ---
 title: Barra de Status no GNU Screen
+description: Como personalizar a barra de status do GNU Screen
 date: 2008-12-08T22:29:00
 tags:
 - linux
-- portuguese
 - screen
 - shell
 ---

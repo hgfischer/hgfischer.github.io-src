@@ -1,9 +1,9 @@
 ---
 title: Dicas de seguranca para usuários Windows
+description: Dicas de segurança para usuários Windows, mas que valem para todos os sistemas operacionais
 date: 2011-02-09T21:41:00
 tags:
 - behaviour
-- portuguese
 - security
 - windows
 ---

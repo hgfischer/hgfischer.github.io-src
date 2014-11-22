@@ -1,11 +1,11 @@
 ---
 title: Netatalk DB_VERSION_MISMATCH
+description: Como resolver o erro DB_VERSION_MISMATCH na instalação do netatalk
 date: 2009-06-29
 tags:
 - linux
 - mac-os-x
 - netatalk
-- portuguese
 - storage
 - time-capsule
 ---

@@ -1,10 +1,10 @@
 ---
 title: Extraíndo arquivos de um RPM
+description: Como extraír arquivos de um RPM
 date: 2011-01-03T11:03:00
 tags:
 - devops
 - linux
-- portuguese
 - rpm
 - sysadm
 ---

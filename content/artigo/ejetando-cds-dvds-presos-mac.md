@@ -1,9 +1,9 @@
 ---
 title: Ejetando CDS e DVDS presos em seu Mac
+description: Como ejetar mídias presas no drive ótico de um Mac
 date: 2010-01-09T12:04:00
 tags:
 - mac-os-x
-- portuguese
 ---
 
 Eventualmente CDs e DVDs danificados ficam presos no drive de um Mac e este não consegue ejetá-los.

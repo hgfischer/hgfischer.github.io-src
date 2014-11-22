@@ -6,5 +6,5 @@ project_url:
 release_date:
 version:
 tags:
-- english
+- project
 ---

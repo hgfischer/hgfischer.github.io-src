@@ -1,10 +1,10 @@
 ---
 title: Todas as vozes do Mac
+description: Como fazer o TTS do Mac dizer algo em todas as vozes disponíveis
 date: 2008-06-30
 tags:
 - text-to-speech
 - mac-os-x
-- portuguese
 ---
 
 Quem já não perdeu um bom tempo fuçando no sintetizador de voz do Mac OS X?

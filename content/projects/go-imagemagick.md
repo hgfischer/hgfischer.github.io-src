@@ -1,9 +1,9 @@
 ---
 title: ImageMagick bindings for Go
+description: ImageMagick bindings for Go (a.k.a. golang)
 date: 2013-08-10T15:13:00
 tags:
 - computer-graphics
-- english
 - golang
 - programming
 ---

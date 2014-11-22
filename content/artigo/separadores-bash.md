@@ -1,9 +1,9 @@
 ---
 title: Separadores no Bash
+description: Como utilizar separadores no Bash
 date: 2009-11-02T11:41:00
 tags:
 - bash
-- portuguese
 - shell
 ---
 

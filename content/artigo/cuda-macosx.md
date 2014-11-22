@@ -1,10 +1,10 @@
 ---
 title: CUDA no Mac OS X
+description: Como instalar o SDK CUDA no Mac
 date: 2009-04-12T00:51:00
 tags:
 - mac-os-x
 - parallel-computing
-- portuguese
 - c-language
 - programming
 ---
