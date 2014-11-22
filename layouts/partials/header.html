@@ -3,9 +3,9 @@
 
 <head>
 	{{ if eq .Title .Site.Title }}
-	<title>{{ .Title }}</title>
+	<title>{{ .Title }} by {{ .Site.Params.Author }}</title>
 	{{ else }}
-	<title>{{ .Title }} :: {{ .Site.Title }}</title>
+	<title>{{ .Title }} :: {{ .Site.Title }} by {{ .Site.Params.Author }}</title>
 	{{ end }}
     {{ partial "meta.html" . }}
     <base href="{{ .Site.BaseUrl }}">
