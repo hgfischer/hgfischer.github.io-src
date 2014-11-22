@@ -3,8 +3,10 @@
 <body>
     {{ partial "header_menu.html" . }} {{ $baseurl := .Site.BaseUrl }}
     <meta itemprop="wordCount" content="{{ .WordCount }}">
-    <meta itemprop="datePublished" content="{{ .Date.Format " 2006-01-02 " }}">
+    <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
     <meta itemprop="url" content="{{ .Permalink }}">
+    <meta itemprop="copyrightHolder" content="{{ .Site.Params.Owner }}">
+    <meta itemprop="copyrightYear" content="{{ .Date.Format "2006" }}">
 
     <div class="container" itemscope itemtype="http://schema.org/Article">
         <div class="page-header">
@@ -34,9 +36,9 @@
                 <hr>
                 <div class="row">
                     <div class="col-sm-12">
-                        Herbert G. Fischer is a jack-of-all-trades computer professional with more than 17 years of 
-						experience in different areas, including software development, systems administration,
-						team management and automation. He is a open-source contributor and author of a few projects at 
+						<span itemprop="author">{{ .Site.Params.Author }}</span> is a programmer with more than 17 
+						years of experience in different sub areas of the internet and software industry. 
+						He is a open-source contributor and author of a few projects at 
                         <a href="http://github.com/hgfischer" target="_blank">Github</a>.
                         You can also find him on <a href="http://twitter.com/hgfischer" target="_blank">Twitter</a>,
                         <a rel="author" href="https://plus.google.com/+HerbertFischer/" target="_blank">Google+</a> and

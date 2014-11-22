@@ -6,5 +6,6 @@ MetaDataFormat: "yaml"
 disqusShortname: "hgfischer"
 params:
     Author: "Herbert Fischer"
+    Owner: "Herbert G. Fischer"
 indexes:
     tag: "tags"
