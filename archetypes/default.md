@@ -1,7 +1,7 @@
 ---
-title: ...
-description: ...
+title: Title
+description: Description
 date: 
 tags:
-	- ...
+- tag
 ---
