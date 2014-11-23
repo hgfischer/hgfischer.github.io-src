@@ -10,9 +10,8 @@ tags:
 - macbook
 ---
 
-Eu voltei do mundo Mac para o mundo Linux no início de 2013 quando meu velho Macbook Pro Late 2008 começou a ficar 
-ultrapassado. Lembro de passar uns maus bocados tentando abrir as fotos que estava tirando com minha câmera digital, no
-meu velho Macbook Pro Late 2008, com apenas 4GB de RAM.
+Eu voltei do mundo Mac para o mundo Linux no início de 2013 quando meu velho Macbook Pro 2008 começou a ficar 
+ultrapassado. Lembro de passar uns maus bocados tentando abrir as fotos que estava tirando com minha câmera digital nele.
 
 <!--more-->
 
