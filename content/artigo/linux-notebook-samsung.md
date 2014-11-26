@@ -1,8 +1,7 @@
 ---
-title: Linux Kernel 3.13 e Notebooks Samsung
+title: Linux e Notebooks Samsung
 description: Como controlar a ventoínha do seu notebook Samsung, no Linux
-date: 2014-11-22T23-21:56-02:00
-draft: true
+date: 2014-11-23T23:21:56
 tags:
 - linux
 - hardware
@@ -24,9 +23,12 @@ se recusa a detectar a ventoínha, mesmo utilizando o módulo `samsung-laptop` e
 deveriam funcionar.
 
 Após muita pesquisa descobri que os notebooks Samsung possuem um problema relacionado ao uso da UEFI e que este problema
-foi contornado em versões anteriores do Kernel com alguns patches. Um deles, inclusive, fez com que o módulo de kernel
-`samsung-laptop` não funcione mais caso o notebook esteja operando em modo UEFI ao invés do modo legado da BIOS.
+foi contornado em versões anteriores do Kernel, com um _patch_ do próprio Linus Torvalds. Uma outra alteração para estes
+notebooks, fez com que o módulo de kernel `samsung-laptop` deixasse de funcionar caso o notebook esteja operando em modo 
+UEFI ao invés do modo legado da BIOS.
 
-Entretanto, eu ainda tinha um problema com aquecimento e não estava vendo a BIOS do notebook ajustar adequadamente a 
-velocidade da ventoínha para dissipar o calor. Por este motivo voltei atrás e reinstalei o Ubuntu (obrigado Puppet!) sob
-o modo legado da BIOS, para conseguir utilizar o devido módulo do kernel e forçar uma velocidade maior da ventoínha.
+Eu ainda tinha um problema com aquecimento e não estava vendo a BIOS do notebook ajustar adequadamente a velocidade da 
+ventoínha para dissipar o calor. Por este motivo voltei atrás e reinstalei o Linux (obrigado Puppet!) sob o modo legado 
+da BIOS, para conseguir utilizar o devido módulo do kernel e forçar uma velocidade maior da ventoínha.
+
+Com isso, a temperatura média da CPU caiu de 80ºC para 50ºC!
