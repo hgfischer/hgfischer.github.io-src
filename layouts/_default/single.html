@@ -59,14 +59,14 @@
                             <ul class="pager">
                                 {{ if .Prev }}
                                 <li class="previous small">
-                                    <a class="previous" href="{{ .Prev.Permalink }}">
+                                    <a class="previous" href="{{ .Prev.RelPermalink }}">
 										<span aria-hidden="true">&larr;</span>
 										&nbsp;{{ .Prev.Title }}
                                     </a>
                                 </li>
                                 {{ end }} {{ if .Next }}
                                 <li class="next small">
-                                    <a class="next" href="{{ .Next.Permalink }}">
+                                    <a class="next" href="{{ .Next.RelPermalink }}">
 										{{ .Next.Title }}&nbsp;<span aria-hidden="true">&rarr;</span>
 									</a>
                                 </li>

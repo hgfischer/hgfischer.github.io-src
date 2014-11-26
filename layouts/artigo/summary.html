@@ -1,6 +1,6 @@
 <div>
 	<h2>
-		<a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</a>
+		<a href="{{ .RelPermalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{ end }}</a>
 	</h2>
 
     <div>
@@ -11,7 +11,7 @@
             {{ .Summary }}
         </p>
 		<footer>
-            <a href="{{ .Permalink }}">
+            <a href="{{ .RelPermalink }}">
                 <nobr>Continue lendo →</nobr>
             </a>
         </footer>
