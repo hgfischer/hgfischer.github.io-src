@@ -9,6 +9,10 @@ draft:
 build:
 	hugo -v 
 
+.PHONY: server
+server: 
+	nice hugo -v server --buildDrafts
+
 .PHONY: watch
 watch: 
 	nice hugo -v server --watch --buildDrafts
