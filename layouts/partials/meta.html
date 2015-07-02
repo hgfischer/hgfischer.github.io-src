@@ -24,7 +24,7 @@
 <meta property="og:description" content="{{ .Description }}">
 <meta property="og:url" content="{{ .Permalink }}">
 {{ if isset .Params "image_uri" }}
-<meta property="og:image" content="{{ .Site.BaseUrl }}{{ index .Params "image_uri" }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ index .Params "image_uri" }}">
 {{ end }}
 <meta property="og:locale" content="pt_BR">
 <meta property="og:locale:alternate" content="en_US">
@@ -35,6 +35,6 @@
 <meta name="twitter:creator" content="@hgfischer">
 <meta name="twitter:description" content="{{ .Description }}">
 {{ if isset .Params "image_uri" }}
-<meta name="twitter:image:src" content="{{ .Site.BaseUrl }}{{ index .Params "image_uri" }}">
+<meta name="twitter:image:src" content="{{ .Site.BaseURL }}{{ index .Params "image_uri" }}">
 {{ end }}
 <meta name="twitter:domain" content="hgfischer.org">
