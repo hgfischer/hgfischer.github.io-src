@@ -12,6 +12,25 @@ function addEvent(element, eventName, fn) {
     }
 }
 
+var knownKeys = [
+    'connectEnd', 'connectStart', 'domComplete', 'domContentLoadedEventEnd', 'domContentLoadedEventStart', 
+    'domInteractive', 'domLoading', 'domainLookupEnd', 'domainLookupStart', 'duration', 'entryType', 
+    'fetchStart', 'initiatorType', 'loadEventEnd', 'loadEventStart', 'name', 'navigationStart', 
+    'redirectEnd', 'redirectStart', 'requestStart', 'responseEnd', 'responseStart', 'secureConnectionStart', 
+    'startTime', 'unloadEventEnd', 'unloadEventStart'
+];
+
+var newKeys = {};
+
+function getKey(key) {
+    var i = knownKeys.indexOf(key);
+    if (i == -1) {
+        i = knownKeys.push(key) - 1;
+        newKeys[i] = key;
+    }
+    return i;
+}
+
 // Cache and map all information. The function return the index.
 var allData = [];
 function mapData(data) {
@@ -26,7 +45,7 @@ function filter(obj) {
     for (var key in obj) {
         var val = obj[key];
         if (val === 0) continue;
-        var mk = mapData(key);
+        var mk = getKey(key);
 
         switch (typeof(val)) {
             case 'undefined':
@@ -47,10 +66,10 @@ if ('performance' in window) {
     addEvent(window, 'load', function() {
         var http = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
         http.onreadystatechange = function() {
-            //if (http.readyState == 4) {
-            //    console.log(http.status);
-            //    console.log(http.responseText);
-            //}
+            if (http.readyState == 4) {
+                console.log(http.status);
+                console.log(http.responseText);
+            }
         }
     
         http.open('POST', 'http://httpbin.org/post', true);
@@ -65,7 +84,8 @@ if ('performance' in window) {
         var data = {};
         data['t'] = filter(window.performance.timing);
         data['e'] = entries;
-        data['a'] = allData;
+        data['d'] = allData;
+        data['k'] = newKeys;
 
         var json = JSON.stringify(data);
         http.send(json);
