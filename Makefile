@@ -75,7 +75,9 @@ html_minify: $(HTMLMINIFY)
 			--use-short-doctype \
 			--remove-empty-attributes \
 			--remove-optional-tags \
-			{} -o {} \;
+			{} -o {}.min \;
+	@find public/ -type f -name '*.html' -print -exec \
+			mv {}.min {} \;
 
 htmllint: draft html_minify
 	$(GRUNT) htmllint
