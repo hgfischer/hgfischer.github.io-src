@@ -23,7 +23,7 @@ dist: theme build html_minify
 	find public/ -type d -exec chmod 0755 {} \;
 
 .PHONY: publish
-publish: dist
+publish:
 	rsync -avz --delete --verbose -e ssh public/ herbert@hgfischer.org:/home/sites/hgfischer/htdocs/
 
 .PHONY: deps
