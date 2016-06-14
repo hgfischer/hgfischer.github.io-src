@@ -24,7 +24,7 @@ dist: theme build html_minify
 
 .PHONY: publish
 publish:
-	rsync -avz --delete --verbose -e ssh public/ herbert@hgfischer.org:/home/sites/hgfischer/htdocs/
+	rsync -avz --delete --verbose -e 'ssh' public/ herbert@hgfischer.org:/home/sites/hgfischer/htdocs/
 
 .PHONY: deps
 deps: $(HUGO)
