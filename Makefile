@@ -25,6 +25,7 @@ dist: theme build html_minify
 .PHONY: publish
 publish:
 	cd public/ && \
+	git pull && \
 	git add -A && \
 	git commit -m "Publishing build of `date`" && \
 	git push origin master
