@@ -23,7 +23,7 @@ dist: theme build html_minify
 	find public/ -type d -exec chmod 0755 {} \;
 
 .PHONY: publish
-publish:
+publish: dist
 	cd public/ && \
 	git pull && \
 	git add -A && \
