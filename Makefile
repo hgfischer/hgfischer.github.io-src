@@ -24,7 +24,10 @@ dist: theme build html_minify
 
 .PHONY: publish
 publish:
-	rsync -avz --delete --verbose -e 'ssh' public/ herbert@hgfischer.org:/home/sites/hgfischer/htdocs/
+	cd public/ && \
+	git add -A && \
+	git commit -m "Publishing build of `date`" && \
+	git push origin master
 
 .PHONY: deps
 deps: $(HUGO)
